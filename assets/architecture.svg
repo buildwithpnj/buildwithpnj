@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.8" fill="#1e293b" opacity="0.6"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 2 L 6 5 L 0 8 Z" fill="#3b82f6" />
+    </marker>
+  </defs>
+  
+  <style>
+    .diagram-bg { fill: #030712; }
+    .outer-border { fill: none; stroke: #1e293b; stroke-width: 1.5; }
+    .grid-pattern { fill: url(#grid); }
+    .box { fill: #090d16; stroke: #1e293b; stroke-width: 1.5; }
+    .box-divider { stroke: #1e293b; stroke-width: 1; }
+    .box-category { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 10px; fill: #3b82f6; letter-spacing: 0.1em; font-weight: 700; }
+    .box-tech { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 12px; fill: #ffffff; font-weight: 600; letter-spacing: 0.05em; }
+    .flow-line { stroke: #3b82f6; stroke-width: 1.5; fill: none; stroke-dasharray: 4 4; }
+    .decor-text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 8px; fill: #475569; letter-spacing: 0.15em; }
+    .title-text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; font-weight: bold; fill: #f8fafc; letter-spacing: 0.2em; }
+    .corner-mark { font-family: Courier New, monospace; font-size: 12px; fill: #334155; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="500" class="diagram-bg" rx="6"/>
+  <rect width="800" height="500" class="grid-pattern" rx="6"/>
+  <rect width="800" height="500" class="outer-border" rx="6"/>
+
+  <!-- Corner Marks (CAD blueprint style) -->
+  <text x="15" y="25" class="corner-mark">+</text>
+  <text x="775" y="25" class="corner-mark">+</text>
+  <text x="15" y="485" class="corner-mark">+</text>
+  <text x="775" y="485" class="corner-mark">+</text>
+
+  <!-- Title & Schema Header -->
+  <g transform="translate(30, 30)">
+    <text x="0" y="0" class="title-text">SYSTEM ARCHITECTURE BLUEPRINT</text>
+    <text x="0" y="14" class="decor-text">MODEL V2.1.0 // INFRASTRUCTURE LAYER SCHEMATICS</text>
+  </g>
+  
+  <g transform="translate(770, 30)">
+    <text x="0" y="0" class="decor-text" text-anchor="end">PROJECT: BWP-CORE</text>
+    <text x="0" y="14" class="decor-text" text-anchor="end">STATUS: VERIFIED ONLINE</text>
+  </g>
+
+  <!-- Layer 1: Frontend -->
+  <rect x="200" y="80" width="400" height="44" rx="4" class="box"/>
+  <line x1="320" y1="80" x2="320" y2="124" class="box-divider"/>
+  <text x="220" y="106" class="box-category">[01] FRONTEND</text>
+  <text x="335" y="106" class="box-tech">Next.js 15 (Vercel)</text>
+
+  <!-- Connection 1 -> 2 -->
+  <path d="M 400 124 L 400 148" class="flow-line" marker-end="url(#arrow)"/>
+
+  <!-- Layer 2: Backend -->
+  <rect x="200" y="150" width="400" height="44" rx="4" class="box"/>
+  <line x1="320" y1="150" x2="320" y2="194" class="box-divider"/>
+  <text x="220" y="176" class="box-category">[02] BACKEND</text>
+  <text x="335" y="176" class="box-tech">FastAPI (Python 3.11)</text>
+
+  <!-- Connection 2 -> 3 -->
+  <path d="M 400 194 L 400 218" class="flow-line" marker-end="url(#arrow)"/>
+
+  <!-- Layer 3: AI Layer -->
+  <rect x="200" y="220" width="400" height="44" rx="4" class="box"/>
+  <line x1="320" y1="220" x2="320" y2="264" class="box-divider"/>
+  <text x="220" y="246" class="box-category">[03] AI LAYER</text>
+  <text x="335" y="246" class="box-tech">OpenAI • Claude 3.5 • Gemini 1.5</text>
+
+  <!-- Connection 3 -> 4 -->
+  <path d="M 400 264 L 400 288" class="flow-line" marker-end="url(#arrow)"/>
+
+  <!-- Layer 4: Memory -->
+  <rect x="200" y="290" width="400" height="44" rx="4" class="box"/>
+  <line x1="320" y1="290" x2="320" y2="334" class="box-divider"/>
+  <text x="220" y="316" class="box-category">[04] MEMORY</text>
+  <text x="335" y="316" class="box-tech">PostgreSQL + pgvector</text>
+
+  <!-- Connection 4 -> 5 -->
+  <path d="M 400 334 L 400 358" class="flow-line" marker-end="url(#arrow)"/>
+
+  <!-- Layer 5: Infrastructure -->
+  <rect x="200" y="360" width="400" height="44" rx="4" class="box"/>
+  <line x1="320" y1="360" x2="320" y2="404" class="box-divider"/>
+  <text x="220" y="386" class="box-category">[05] INFRASTRUCTURE</text>
+  <text x="335" y="386" class="box-tech">Docker • GitHub Actions</text>
+
+  <!-- Connection 5 -> 6 -->
+  <path d="M 400 404 L 400 428" class="flow-line" marker-end="url(#arrow)"/>
+
+  <!-- Layer 6: Deployment -->
+  <rect x="200" y="430" width="400" height="44" rx="4" class="box"/>
+  <line x1="320" y1="430" x2="320" y2="474" class="box-divider"/>
+  <text x="220" y="456" class="box-category">[06] DEPLOYMENT</text>
+  <text x="335" y="456" class="box-tech">AWS Cloud Services</text>
+
+  <!-- Sidebar technical markings -->
+  <g transform="translate(760, 250)">
+    <text x="0" y="0" class="decor-text" transform="rotate(90)" text-anchor="middle">BUILDWITHPNJ // MISSION CONTROL DATASTREAM</text>
+  </g>
+  <g transform="translate(40, 250)">
+    <text x="0" y="0" class="decor-text" transform="rotate(-90)" text-anchor="middle">WARBORN OPERATIONAL BLUEPRINT</text>
+  </g>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 64" width="800" height="64">
+  <defs>
+    <pattern id="grid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="8" r="0.8" fill="#1e293b" opacity="0.6"/>
+    </pattern>
+  </defs>
+  
+  <style>
+    .label { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 8px; fill: #64748b; letter-spacing: 0.1em; font-weight: 700; text-transform: uppercase; }
+    .value { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 11px; fill: #f8fafc; font-weight: bold; letter-spacing: 0.05em; }
+    .border-line { stroke: #1e293b; stroke-width: 1; }
+    .grid-bg { fill: #030712; }
+  </style>
+  
+  <!-- Background Grid -->
+  <rect width="800" height="64" class="grid-bg" rx="4"/>
+  <rect width="800" height="64" fill="url(#grid)" rx="4"/>
+  
+  <!-- Outer Border -->
+  <rect width="800" height="64" fill="none" stroke="#1e293b" stroke-width="1.5" rx="4"/>
+  
+  <!-- Column Dividers -->
+  <line x1="133" y1="0" x2="133" y2="64" class="border-line"/>
+  <line x1="266" y1="0" x2="266" y2="64" class="border-line"/>
+  <line x1="399" y1="0" x2="399" y2="64" class="border-line"/>
+  <line x1="532" y1="0" x2="532" y2="64" class="border-line"/>
+  <line x1="665" y1="0" x2="665" y2="64" class="border-line"/>
+  
+  <!-- Col 1: Runtime -->
+  <g transform="translate(0, 0)">
+    <text x="16" y="24" class="label">RUNTIME</text>
+    <circle cx="21" cy="41" r="5" fill="#10b981" opacity="0.3"/>
+    <circle cx="21" cy="41" r="2.5" fill="#10b981"/>
+    <text x="34" y="45" class="value">ONLINE</text>
+  </g>
+  
+  <!-- Col 2: Current Sprint -->
+  <g transform="translate(133, 0)">
+    <text x="16" y="24" class="label">CURRENT SPRINT</text>
+    <circle cx="21" cy="41" r="5" fill="#3b82f6" opacity="0.3"/>
+    <circle cx="21" cy="41" r="2.5" fill="#3b82f6"/>
+    <text x="34" y="45" class="value">ACTIVE</text>
+  </g>
+  
+  <!-- Col 3: AI Infrastructure -->
+  <g transform="translate(266, 0)">
+    <text x="16" y="24" class="label">AI INFRASTRUCTURE</text>
+    <circle cx="21" cy="41" r="5" fill="#f59e0b" opacity="0.3"/>
+    <circle cx="21" cy="41" r="2.5" fill="#f59e0b"/>
+    <text x="34" y="45" class="value">BUILDING</text>
+  </g>
+  
+  <!-- Col 4: Documentation -->
+  <g transform="translate(399, 0)">
+    <text x="16" y="24" class="label">DOCUMENTATION</text>
+    <circle cx="21" cy="41" r="5" fill="#10b981" opacity="0.3"/>
+    <circle cx="21" cy="41" r="2.5" fill="#10b981"/>
+    <text x="34" y="45" class="value">LIVE</text>
+  </g>
+  
+  <!-- Col 5: Mission Control -->
+  <g transform="translate(532, 0)">
+    <text x="16" y="24" class="label">MISSION CONTROL</text>
+    <circle cx="21" cy="41" r="5" fill="#10b981" opacity="0.3"/>
+    <circle cx="21" cy="41" r="2.5" fill="#10b981"/>
+    <text x="34" y="45" class="value">RUNNING</text>
+  </g>
+  
+  <!-- Col 6: Build Status -->
+  <g transform="translate(665, 0)">
+    <text x="16" y="24" class="label">BUILD STATUS</text>
+    <circle cx="21" cy="41" r="5" fill="#10b981" opacity="0.3"/>
+    <circle cx="21" cy="41" r="2.5" fill="#10b981"/>
+    <text x="34" y="45" class="value">STABLE</text>
+  </g>
+</svg>
