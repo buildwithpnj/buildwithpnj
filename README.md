@@ -130,11 +130,11 @@ Building production-grade AI systems, Voice AI platforms, AI agents, automation 
 ### ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-● Created branch in `Warbornai/warborn-ui` (Jul 23, 2026)
-● Pushed changes to `Warbornai/warborn-developer-portal` (`main`) (Jul 23, 2026)
-● Pushed changes to `Warbornai/warborn-cloud` (`main`) (Jul 23, 2026)
-● Pushed changes to `Warbornai/warborn-gateway` (`main`) (Jul 23, 2026)
-● Pushed changes to `Warbornai/warborn-cli` (`main`) (Jul 23, 2026)
+● Pushed changes to `Warbornai/warborn-sdk` (`main`) (Jul 24, 2026)
+● Pushed changes to `Warbornai/warborn-types` (`main`) (Jul 24, 2026)
+● Pushed changes to `Warbornai/warborn-sdk` (`main`) (Jul 24, 2026)
+● Pushed changes to `Warbornai/warborn-sdk` (`main`) (Jul 24, 2026)
+● Pushed changes to `Warbornai/warborn-runtime` (`main`) (Jul 24, 2026)
 <!-- ACTIVITY:END -->
 
 ---
